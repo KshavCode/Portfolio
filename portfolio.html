@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Preahvihear&family=Ysabeau+SC:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
+    <style>
+
+        * {
+            margin: 0vw;
+            padding: 0vw;
+        }
+        body {
+            overflow-x: hidden;
+        }
+        .main {
+            background-color: aquamarine;
+            height: 35vw;
+            position: relative;
+        }
+        #name {
+            color: rgb(174, 89, 89);
+        }
+
+        #title1 {
+            margin-left: 2vw;
+            top: 6vw;
+            font-size: 8vw;
+            font-family: 'Signika Negative', sans-serif;
+            color: rgba(0, 73, 115, 0.995);
+            cursor: pointer;
+            position: absolute;
+        }
+
+        #title2 {
+            top: 15vw;
+            position:absolute;
+            font-size: 1.7vw;
+            margin-left: 2.8vw;
+            letter-spacing: 0.7vw;
+            font-family: 'Source Code Pro', monospace;
+        }
+        .iconpng {
+            width: 7vw;
+            position: absolute;
+            right: -20vw;
+        }
+
+        @keyframes throw1 {
+            from {right: -5vw;
+                      top: 10vw}
+            to {right: 15vw;
+                  top: 2vw}
+        }
+        @keyframes throw2 {
+            from {right: -10vw;
+                      top: 20vw}
+            to {right: 11vw;
+                  top: 10vw}
+        }
+        @keyframes throw3 {
+            from {right: -15vw;
+                      top: 30vw}
+            to {right: 7vw;
+                  top: 18vw}
+        }
+        @keyframes throw4 {
+            from {right: -20vw;
+                      top: 40vw}
+            to {right: 1vw;
+                  top: 26vw}
+        }
+        #pyimg {
+            animation-name: throw1;
+            animation-iteration-count: 1;
+            animation-timing-function: cubic-bezier(0.000, 1.155, 0.970, 0.990);
+            animation-direction: normal;
+            animation-duration: 4s;
+            animation-delay: 2s;
+            animation-fill-mode: forwards;
+        }
+        #cssimg {
+            animation-name: throw2;
+            animation-iteration-count: 1;
+            animation-timing-function: cubic-bezier(0.000, 1.155, 0.970, 0.990);
+            animation-duration: 4s;
+            animation-delay: 2.5s;
+            animation-fill-mode: forwards;
+        }
+        #tensimg {
+            animation-name: throw3;
+            animation-iteration-count: 1;
+            animation-timing-function: cubic-bezier(0.000, 1.155, 0.970, 0.990);
+            animation-duration: 4s;
+            animation-delay: 3s;
+            animation-fill-mode: forwards;
+        }
+        #sqlimg {
+            animation-name: throw4;
+            animation-iteration-count: 1;
+            animation-timing-function: cubic-bezier(0.000, 1.155, 0.970, 0.990);
+            animation-duration: 4s;
+            animation-delay: 3.5s;
+            animation-fill-mode: forwards;
+        }
+        @keyframes fadein {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #quotetxt {
+            font-size: 2vw;
+            font-style: italic;
+            font-family:'Times New Roman';
+            color: rgb(71, 71, 71);
+            font-weight: 100;
+            position: absolute;
+            bottom: 10vw;
+            margin-left: 2vw;
+            opacity: 0;
+            animation-name: fadein;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+            animation-delay: 0.5s;
+        }
+        #quoteauthor {
+            position: absolute;
+            font-size: 2vw;
+            font-family: 'Times New Roman';
+            color: rgb(86, 86, 86);
+            font-weight: 800;
+            bottom: 7vw;
+            left: 33vw;
+            opacity: 0;
+            animation-name: fadein;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+            animation-delay: 2.5s;
+        }
+
+        .titles {
+            margin-top: 5vw;
+            margin-left: 1vw;
+            font-family : 'Preahvihear', sans-serif;
+            font-weight: 900;
+            font-size: 3vw; 
+            color: darkred;
+        }
+        #line {
+            width: 50vw;
+            height: 0.2vw;
+            background-color: black;
+            margin-left: 0.9vw;
+        }
+        #para1 {
+            margin: 1vw;
+            margin-right: 2vw;
+            font-size: 1.7vw;
+            font-family: 'Preahvihear', sans-serif;
+            text-align: justify;
+        }
+        #list1 {
+            margin: 3vw;
+            font-size: 1.7vw;
+            list-style-type:square;
+            font-family: 'Preahvihear', sans-serif;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        #a1:hover, #a2:hover, #a3:hover, #a4:hover {
+            text-decoration: underline;
+            text-decoration-color: black;
+            color: rgb(171, 16, 255);
+            cursor: pointer;
+        }
+        .table1 {
+            display: grid;
+            grid-template-columns: 16vw 10vw;
+            margin: 1vw;
+            margin-top: 3vw;
+            cursor: default;
+        }
+        .skilltxt {
+            font-size: 2vw;
+            font-family: 'Preahvihear', sans-serif;
+        }
+
+        .bar {
+            height: 3.8vw;
+            width: 30vw;
+            position: relative;
+        }
+
+
+        .bar::before {
+            position: absolute;
+            top: 1vw;
+            left: 102%;
+            font-size: 1.5vw;
+            color: darkblue;
+        }
+        #b1::before {
+            content: '80%';
+        }
+        #b2::before {
+            content: '95%';
+        }
+        #b3::before {
+            content: '85%';
+        }
+        #b4::before {
+            content: '65%';
+        }
+        #b5::before {
+            content: '50%';
+        }
+        #b6::before {
+            content: '75%';
+        }
+        #b7::before {
+            content: '25%';
+        }
+        #b8::before {
+            content: '20%';
+        }
+        #b9::before {
+            content: '90%';
+        }
+        #b10::before {
+            content: '40%';
+        }
+        #b11::before {
+            content: '10%';
+        }
+        #b12::before {
+            content: '95%';
+        }
+        #b13::before {
+            content: '85%';
+        }
+        #b14::before {
+            content: '85%';
+        }
+        #b15::before {
+            content: '60%';
+        }
+        #b16 {
+            font-size: 1.7vw;
+            font-family: 'Preahvihear', sans-serif;
+            margin: 1vw;
+            margin-top: 5vw;
+        }
+        .deco {
+            color: darkblue;
+            cursor: default;
+        }
+        .projecttxt {
+            font-size: 2.3vw;
+            margin-left: 1vw;
+            margin-top: 3vw;
+            font-family: 'Acme', sans-serif;
+            color: darkblue;
+        }
+        #image1 {
+            width: 60vw;
+            margin: 5vw;
+            margin-left: 20vw;
+            border: 1vw double rgb(218, 0, 0);
+            cursor: pointer;
+        }
+        #image2 {
+            width: 60vw;
+            margin-left: 20vw;
+            margin-bottom: 5vw;
+            border: 1vw double rgb(218, 0, 0);
+            cursor: pointer
+        }  
+        #image3 {
+            width: 60vw;
+            margin-left: 20vw;
+            margin-bottom: 5vw;
+            margin-top: 5vw;
+            border: 1vw double rgb(218, 0, 0);
+            cursor: pointer
+        }  
+        #image4 {
+            width: 60vw;
+            margin-left: 20vw;
+            margin-bottom: 5vw;
+            border: 1vw double rgb(218, 0, 0);
+            cursor: pointer
+        }  
+        #linktxt {
+            color: rgb(193, 5, 193);
+            text-decoration: underline;
+        }
+        #linktxt:hover {
+            color: rgb(198, 123, 213)
+        }
+        .desc {
+            font-size: 1.7vw;
+            font-family: 'Preahvihear', sans-serif;
+            margin: 1vw;
+            margin-right: 2vw;
+            margin-bottom: 4vw;
+            text-align: justify;
+        }
+        .end {
+            background-color: black;
+            height: 10vw;
+            position: relative;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #endtxt {
+            color: white;
+            font-family: 'Roboto Slab', serif;
+            font-size: 1.8vw;
+            position: absolute;
+            top: 1vw;
+        }
+        .iconss {
+            width: 3.5vw;
+            position: absolute;
+            align-self: center;
+            margin-left: 36.5vw;
+            margin-top: 5vw;
+        }
+        .iconss:hover {
+            opacity: 0.7;
+        }
+        #insta {
+            left: 20vw;
+        }
+        #face {
+            left: 14vw;
+        }
+        #abc {
+            left: 8vw;
+        }
+        #git {
+            left: 2vw;
+        }
+        
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="main">
+            <h3 id="title1">Hi! I am <a id="name">Keshav</a>.</h3>
+            <h4 id="title2">WELCOME TO MY WORLD</h4>
+            <img class="iconpng" src="py.png" alt="pythonimg" id="pyimg">
+            <img class="iconpng" src="css.png" alt="csspng" id="cssimg">
+            <img class="iconpng" src="tens.png" alt="tensorflowimg" id="tensimg">
+            <img class="iconpng" src="sql.png" alt="sqlimg" id="sqlimg">
+            <h3 id="quotetxt">“Education without application is just entertainment.”</h3>
+            <h3 id="quoteauthor">- Tim Sanders</h3>
+    </div>
+    <div class="content">
+        <h2 class="titles">About Me</h2>
+        <hr id="line">
+        <p id="para1">Hello viewers! I am Keshav, currently living in Delhi, India. I have been into coding field since February 2021. I am a student who is pursuing a degreee in Computer Science. I am 18 years old and 2005 born. When I started about coding, I was quite familiar with HTML but not that much professional so that I could create amazing websites. I started learning Python as it's an easy to understand langauge. I got to know about various modules and then I started applying them by making projects in 2023. I know that I should have created projects after few months of learning python and I accept my mistake. But now, I am growing and will be completing a lot of projects by myself. I am not a professional programmer, still an intermediate and need to learn many more things. Some of my projects will be listed below, in this webpage.</p>
+    </div>
+
+    <div class="content2">
+        <h2 class="titles">Languages</h2>
+        <hr id="line">
+        <ul id="list1">
+            <li id="a1"><a href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank">Python</a></li>
+            <li id="a2"><a href="https://en.wikipedia.org/wiki/HTML" target="_blank">HTML</a></li>
+            <li id="a3"><a href="https://en.wikipedia.org/wiki/CSS" target="_blank">CSS</a></li>
+            <li id="a4"><a href="https://en.wikipedia.org/wiki/SQL" target="_blank">SQL</a></li>
+        </ul>
+    </div>
+
+    <div class="content3">
+        <h2 class="titles">Modules</h2>
+        <hr id="line">
+        <div class="table1">
+            <p class="skilltxt" >Flask</p>
+            <progress value="80" max="100" class="bar" id="b1"></progress>
+            <p class="skilltxt" >JSON</p>
+            <progress value="95" max="100" class="bar" id="b2"></progress>
+            <p class="skilltxt">Numpy</p>
+            <progress value="85" max="100" class="bar" id="b3"></progress>
+            <p class="skilltxt" >OS</p>
+            <progress value="65" max="100" class="bar" id="b4"></progress>
+            <p class="skilltxt">Pandas</p>
+            <progress value="50" max="100" class="bar" id="b5"></progress>
+            <p class="skilltxt">PIL (Pillow)</p>
+            <progress value="75" max="100" class="bar" id="b6"></progress>
+            <p class="skilltxt">PyGame</p>
+            <progress value="25" max="100" class="bar" id="b7"></progress>
+            <p class="skilltxt">PyPDF</p>
+            <progress value="20" max="100" class="bar" id="b8"></progress>
+            <p class="skilltxt">Requests</p>
+            <progress value="90" max="100" class="bar" id="b9"></progress>
+            <p class="skilltxt">Shutil</p>
+            <progress value="40" max="100" class="bar" id="b10"></progress>
+            <p class="skilltxt">Sql-Connecter</p>
+            <progress value="10" max="100" class="bar" id="b11"></progress>
+            <p class="skilltxt">Time</p>
+            <progress value="95" max="100" class="bar" id="b12"></progress>
+            <p class="skilltxt">Tkinter</p>
+            <progress value="85" max="100" class="bar" id="b13"></progress>
+            <p class="skilltxt">Turtle</p>
+            <progress value="85" max="100" class="bar" id="b14"></progress>
+            <p class="skilltxt">Win32 API</p>
+            <progress value="60" max="100" class="bar" id="b15"></progress>
+        </div>
+        <p id="b16">In order to clear confusions, the progress bar depicts of how much I know these modules (basic commands and a little bit of advanced) and how much I used them. I know modules cannot be learnt fully as they are getting updated on a regular basis, that is why I told this.</p>
+    </div>
+
+    <div class="content4">
+        <h2 class="titles">Projects</h2>
+        <hr id="line">
+        <div class= "projecttxt" id="c1">✤ Astrology Webpage Template</div>
+        <img src="img1.jpg" id="image1" alt="img1">
+        <img src="img2.jpg" id="image2" alt="img2">
+        <p class="desc">This was my latest project (created on : 14 July 2023) before this portfolio website. I have used animations and a lot of new stuff in the above template.  If you would like to visit the website then <a href="" id="linktxt">click here</a> to open it on github. Also, this website is 90% responsive hence, mobile users may find it hard to explore this template so I suggest them to turn on the web view on their mobile phone.</p>
+        <div class= "projecttxt" id="c2"><a href="" class="deco">✤ Bill Invoice Register</a></div>
+        <img src="img3.jpg" id="image1" alt="img3">
+        <img src="img4.jpg" id="image2" alt="img4">
+        <p class="desc">One of the hardest but worth it projects of mine. It was created on 11 June 2023. It is an invoice collector app, which imports all the prices from a json file (the owner can change price of any item just by accessing json file) and then using the quantity to calculate the total amount. Then it saves the invoice in a folder of current date. The program creates the folder itself so no need to create one. You just need to open the app, which will reset the invoice to '0001' every new day, while the old invoices are collected in folder. Also, don't worry, the folders are renamed itself according to the current date of the invoice saving. It means that there will be a list of invoices in every different folder based on date. This project uses JSON and Tkinter module. <a href="" id="linktxt">Click here</a> to access the source code of this app!</p>
+        <div class= "projecttxt" id="c3"><a href="" class="deco">✤ Contact List Storage</a></div>
+        <img src="img5.jpg" id="image1" alt="img5">
+        <img src="img6.jpg" id="image2" alt="img6">
+        <p class="desc">This project is purely of python and was made on 13 June 2023, and took me 1-2 hours to complete. It may look simple but actually it's complicated because it uses OOPS, mainly classes, inheritances, etc. which are really complex to understand. It saves a number (temporarily!) with a contact name that you like to keep. I was thinking was using a json file in order to store these contacts but to keep it simple (which was complicated due to OOPS), I just kept it like that. The access to the source code is <a href="" id="linktxt">here</a>.</p>
+        <div class= "projecttxt" id="c4"><a href="" class="deco">✤ Dictionary</a></div>
+        <img src="img7.jpg" id="image1" alt="img1">
+        <img src="img8.jpg" id="image2" alt="img2">
+        <p class="desc">Another unique project which uses API in order to work. You may search on google what an API is or, it's just a simple data extraction process from another website. So, this program is just a middleman which brings vegetables (the data) from a farmer (website)and gives it to the vendor (program), which eventually gives the vegetable (data) to the customer (the user). The program uses JSON, Requests and Win32 API client in order to complete. Requests brings the data to the program, JSON changes the format of the 'brought data' to an 'usable data' format and at last it shows the meaning (no matter how many, can be more than 10 too!). Win32 is only used to speak the word (for pronounciation). <a href="" id="linktxt">Here</a> is the link to the source code. The creation of this program was on 25 April 2023.</p>
+        <div class= "projecttxt" id="c5"><a href="" class="deco">✤ Hangman</a></div>
+        <img src="img9.jpg" id="image1" alt="img1">
+        <img src="img10.jpg" id="image2" alt="img2">
+        <p class="desc">One of the most complex + mind wrecking program. I spent hours to make the program fully functionable and a little beautiful (with blanks and guesses). It is a pure Python program, but uses a lot of knowledge in order to get completed. <a href="" id="linktxt">Click here</a> for the source code. Also the words entered in the programs to use, are entered manually by me. I could use API to get new words everytime but I didn't because I was already mad while completing the program. Anyways, the program was created on 10 May 2023. It also saves the scores (based on guessing the word based on minimum lost lives) in a text file.</p>
+        <div class= "projecttxt" id="c6"><a href="" class="deco">✤ Internet Speed Test</a></div>
+        <img src="img11.jpg" id="image1" alt="img1">
+        <img src="img12.jpg" id="image2" alt="img2">
+        <p class="desc">Created on 26 April 2023, this program uses API as usual and it can return the internet speed of uploading and downloading according to the server you choose. You choose the nearest server or the best server in order to measure your internet speed. This one's pretty simple. Here is the <a href="" id="linktxt">link</a>  for you to check out it's source code.</p>
+        <div class= "projecttxt" id="c7"><a href="" class="deco">✤ Multiplayer Snake Game</a></div>
+        <img src="img13.jpg" id="image1" alt="img1">
+        <img src="img14.jpg" id="image2" alt="img2">
+        <p class="desc">One of the best and the interesting project. This one is yet to be completed but still I am providing the link to it's <a href="" id="linktxt">source code</a>. Only the 'game over' scene is yet to be completed. Also, this project was created on 22 November 2022, my first project. I was just learning the tutorial for the regular snake game and suddenly an idea popped into my head of making a 2 player snake game! Inspiration was slither.io, only the difference was that there will 2 players for this game. This is my favorite project of all time as I made the general snake game into multiplayer, all by myself. It uses the PyGame module. If you want to play then the source code is given the controls for Player1 is 'WASD' and Player2 is 'Arrow Keys'. Have fun playing! A little fun fact here - If you are hearing music while playing this game, then those two are made by me. I produced both of those tracks myself.</p>
+        <div class= "projecttxt" id="c8"><a href="" class="deco">✤ Password Generator App</a></div>
+        <img src="img15.jpg" id="image1" alt="img1">
+        <img src="img16.jpg" id="image2" alt="img2">
+        <p class="desc">Easiest project in the whole list. I recommend this to everyone who are in the learning stage of Tkinter. You just need to put a MenuBar, Entry Field and a simple button which generates the password according to the length chosen by the user. You want source code? Then here is the <a href="" id="linktxt">link</a>!</p>
+        <div class= "projecttxt" id="c9"><a href="" class="deco">✤ QR Code Generator</a></div>
+        <img src="img17.jpg" id="image1" alt="img1">
+        <img src="img18.jpg" id="image2" alt="img2">
+        <p class="desc">One more interesting project of this list, created on 24 April 2023. It may be little complicated but honestly, it's not. You just need to use Tkinter and PIL (pillow) module. Pillow is for image manipulation (photoshop using coding), and it's used here to convert the qrcode image data into valid image format as it is retrieved using API. So, once the user clicks on 'GENERATE CODE' button, the photo app from the PC will open up which will be having the QR code. Also, it's a permanent QR code, so you can even use it after many years. Here is the <a href="" id="linktxt">source code</a>. </p>
+        <div class= "projecttxt" id="c10"><a href="" class="deco">✤ Weather App</a></div>
+        <img src="img19.jpg" id="image1" alt="img1">
+        <img src="img20.jpg" id="image2" alt="img2">
+        <p class="desc">Interesting one as it uses the API in order to show the results. Requests, Tkinter and JSON are the modules needed to run the program. Enter any place name and it will show you the information of the weather as shown in the above picture. Also, here's the <a href="" id="linktxt">link</a>  for the source code.</p>
+        <div class="projecttxt" id="c11">✤ Image Format Changer</div>
+        <p class="desc">This one was an interesting one too and my first ever PIL project which I made on 26 December 2022. Sadly, I lost it's source code. However, all you need is PIL and Tkinter. The user will upload the image using the Tkinter app and the PIL will change the format of the image into JPEG/WEBP/PNG and many more formats. Using the OS module, will save the images automatically in a self made folder with a random name. That is all. Sorry for unavaibility of source code.</p>
+        <div class="projecttxt" id="c12">✤ Bot</div>
+        <p class="desc">This is the best project I've been working on since July 2021. However, I won't be providing it's source code but you can invite it using this <a href="" id="linktxt">link</a>. You can test all it's commands and every function!</p>
+        <h2 class="titles">My Goals</h2>
+        <hr id="line">
+        <p class="desc">These are the projects which I created until now. I know that they are really basic ones but I am trying to focus more on advanced projects. This portfolio is one of my projects and maybe I will continue to edit this webpage. So, currently I have few goals. I gotta learn JavaScript to enhance my web developing skills. I need to learn sql-connector in order to learn about data manipulation which will eventually lead me to Data Science. Side by side, I will be learning scikit-learn, another module of python used for maching learning. But before starting that, I need to learn about machine learning algorithms. Then, I am ready to go, and use them to make more awesome projects. After completing these goals, I'll just keep on learning machine learning more and make various models in order to perform creative predictions about events and many things. Creating webpages, apps, games, programs are just my hobbies and manipulating data is my career. </p>
+    </div>
+    <div class="end">
+        <p id="endtxt">Have any questions? Encountered any glitches in this website? Any suggestions?</p>
+        <a href=""><img src="facebook.png" alt="faceimg" id="face" class="iconss"></a>
+        <a href=""><img src="instagram.png" alt="instaimg" id="insta" class="iconss"></a>
+        <a href=""><img src="github.png" alt="gitimg" id="git" class="iconss"></a>
+        <a href=""><img src="this.png" alt="thisimg" id="abc" class="iconss"></a>
+    </div>
+</body>
+</html>
