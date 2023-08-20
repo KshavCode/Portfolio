@@ -324,7 +324,7 @@
         }
         .end {
             background-color: black;
-            height: 10vw;
+            height: 5vw;
             position: relative;
             display: flex;
             justify-content: space-evenly;
@@ -336,26 +336,21 @@
             position: absolute;
             top: 1vw;
         }
+        #socialapp {
+            background-color: black;
+            height: 4vw;
+            display: flex;
+            justify-content: center;
+        }
         .iconss {
             width: 3.5vw;
-            position: absolute;
-            align-self: center;
-            margin-left: 36.5vw;
-            margin-top: 5vw;
+            margin-right: 2vw;
         }
         .iconss:hover {
             opacity: 0.7;
         }
-        #insta {
-            left: 17vw;
-        }
-        #abc {
-            left: 11vw;
-        }
-        #git {
-            left: 5vw;
-        }
-        @media screen and (max-width: 1000px) {
+    
+        @media screen and (max-width: 414px) {
                 body {
                     overflow-x: hidden;
                 }
@@ -373,13 +368,13 @@
                     visibility: hidden;
                 }
                 #quotetxt {
+                    margin-top: 1em;
                     top: 10rem;
-                    font-size: 1rem;
+                    font-size: 4vw;
+                    
                 }
                 #quoteauthor {
-                    top:12rem;
-                    font-size: 1rem;
-                    left: 1rem ;
+                    visibility: hidden;
                 }
 
                 #pyimg {
@@ -468,28 +463,165 @@
                     margin: 1rem;
                 }
                 .end {
-                    height: 6.5rem;
+                    height: 4rem;
                 }
                 #endtxt {
                     font-size: 1rem;
                     margin-left: 0.5rem;
                 }
+                #socialapp {
+                    background-color: black;
+                    height: 10vw;
+                    display: flex;
+                    justify-content: center;
+                    border: 2px solid black;
+                }
                 .iconss {
                     top: 2.5rem;
                     width: 2rem;
                 }
-                #git,#abc,#insta,#face {
-                    margin-left: 7.5rem ;
-                }
-                #abc {
-                    left: 3.6rem;
-                }
-                #insta{
-                    left: 6rem;
-                }
-
-            
         }
+        @media screen and (max-width: 370px) {
+            .main {
+                background-color: rgb(220, 194, 255);
+            }
+            #pyimg {
+                animation-name: none;
+                right: 30vw;
+                width: 11vw;
+                top: 2rem;
+            }
+            #tensimg {
+                animation-name: none;
+                right: 3rem;
+                width: 11vw;
+                top: 1.9rem;
+            }
+            #cssimg {
+                animation-name: none;
+                right: 30vw;
+                width: 11vw;
+                top: 6rem;
+            }
+            #sqlimg {
+                animation-name: none;
+                right: 2.7rem;
+                width: 11vw;
+                top: 6rem;
+            }
+        }
+        @media screen and (min-width: 415px) and (max-width: 1200px) {
+            .main {
+                background-color: lightpink;
+                height: 50vw;
+            }
+            @keyframes fly1 {
+                from {left: -10vw;}
+                to {left: 3vw;}
+            }
+            @keyframes fly2 {
+                from {left: -10vw;}
+                to {left: 15vw;}
+            }
+            @keyframes fly3 {
+                from {left: -10vw;}
+                to {left: 27vw;}
+            }
+            @keyframes fly4 {
+                from {left: -10vw;}
+                to {left: 40vw;}
+            }
+
+            #pyimg {
+                animation-name: fly1;
+                animation-timing-function: linear;
+                animation-duration: 0.3s;
+                animation-direction: forwards;
+                animation-iteration-count: 1;
+                animation-delay: 0.5s;
+                left: -10vw;
+                width: 10vw;
+                top: 23vw;
+            }
+            #cssimg {
+                animation-name: fly2;
+                animation-timing-function: linear;
+                animation-duration: 0.3s;
+                animation-direction: forwards;
+                animation-iteration-count: 1;
+                animation-delay: 1s;
+                left: -10vw;
+                width: 10vw;
+                top: 23vw;
+            }
+            #tensimg {
+                animation-name: fly3;
+                animation-timing-function: linear;
+                animation-duration: 0.3s;
+                animation-direction: forwards;
+                animation-iteration-count: 1;
+                animation-delay: 1.5s;
+                left: -10vw;
+                width: 10vw;
+                top: 22vw;
+            }
+            #sqlimg {
+                animation-name: fly4;
+                animation-timing-function: linear;
+                animation-duration: 0.3s;
+                animation-direction: forwards;
+                animation-iteration-count: 1;
+                animation-delay: 2s;
+                left: -10vw;
+                width: 10vw;
+                top: 23vw;
+            }
+            #title2 {
+                font-size: 2.5vw;
+            }
+            #quotetxt {
+                font-size: 3vw;
+            }
+            #quoteauthor {
+                font-size: 3vw;
+                left: 60vw;
+            }
+            #para1 {
+                font-size: 2.7vw;
+            }
+            .titles {
+                font-size: 5vw
+            }
+            #a1, #a2, #a3, #a4 {
+                font-size: 2.7vw;
+                margin-left: 2vw;
+            }
+            .skilltxt {
+                font-size: 2.7vw;
+            }
+            .bar {
+                width: 50vw;
+            }
+            .bar::before {
+                font-size: 3vw;
+                margin-top: -0.5vw;
+            }
+            .deco {
+                font-size: 4vw;
+            }
+            .desc {
+                font-size: 2.7vw;
+            }
+            #image1 {
+                width: 93vw;
+                margin: 2vw;
+            }
+            #image2 {
+                margin: 2vw;
+                width: 93vw;
+            }
+        }
+        
         
 
         
@@ -615,6 +747,8 @@
     </div>
     <div class="end">
         <p id="endtxt">Have any questions? Encountered any glitches in this website? Any suggestions?</p>
+    </div>
+    <div id="socialapp">
         <a href="https://instagram.com/ehh.whatt?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"><img src="instagram.png" alt="instaimg" id="insta" class="iconss"></a>
         <a href="https://github.com/KshavCode"><img src="github.png" alt="gitimg" id="git" class="iconss"></a>
         <a href="https://discord.gg/An5cWwhQdY"><img src="abc.png" alt="abcimg" id="abc" class="iconss"></a>
